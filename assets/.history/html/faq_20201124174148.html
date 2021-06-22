@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UDDA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../fonts">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        var divItems = document.getElementsByClassName("radiodiv");
+
+        function selected(item) {
+            this.clear();
+            item.classList.add("active");
+
+            // item.style.backgroundColor = '#69bcbc';
+            // item.toggleClass('red').toggleClass('blue');
+            // item.siblings().css("background-color", "red");
+            $(".active span .fa").toggleClass("fa-angle-right fa-angle-down");
+
+        }
+
+        function clear() {
+            $(".active span .fa").toggleClass("fa-angle-right fa-angle-down");
+            for (var i = 0; i < divItems.length; i++) {
+                var item = divItems[i];
+                // item.style.backgroundColor = '#eeeeee';
+
+                item.classList.remove("active");
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid p-2 bg-light-green">
+
+        <div class="bg-white faq-container">
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What social media options are available to login on UDDA?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>UDDA provides support for Facebook, Instagram and Twitter to use for login</p>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv active" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    <h2 class="my-0">Are there any current promotions for registering?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>Yes, you will receive them during the registration process.</p>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">Forgot your log in details?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>If you’ve forgotten your password, simply click here and follow the instructions. You will
+                        receive an email from us containing a link to verify your security answers. After clicking the
+                        link you will be able to set a new password. (Please check your junk/spam folders in case our
+                        email is not recognised).</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">How old do I have to be to use the UDDA APP?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>Each state has their own unique laws but UDDA has an age restriction of 18 years of age to
+                        register and use our FREE to Play app.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What are the FREE to Play betting types available on the UDDA app?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>UDDA provides FREE to Play Odds(Moneyline, Spread, Total), Bet a Friend, Prop bets and Custom
+                        bets options for the user</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What is a moneyline bet?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>A moneyline bet is one of the easiest kinds of bets you can make at a sportsbook. Simply put, it
+                        means betting on a specific team to win a game. A game with a moneyline will have a favorite
+                        (the team expected to win) and an underdog (the team expected to lose).</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What will be the payout for Moneyline bets? </h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>A moneyline bet is one of the easiest kinds of bets you can make at a sportsbook. Simply put, it
+                        means betting on a specific team to win a game. A game with a moneyline will have a favorite
+                        (the team expected to win) and an underdog (the team expected to lose).</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What is point/spread?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>The point spread is the projected number of points that separate two teams. A game with a spread
+                        will have a favorite (the team expected to win) and an underdog (the team expected to lose).</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What is Total (Over/Under) bet? </h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>The terms “total” and “over/under” are synonymous when placing wagers. This type of bet is on the
+                        sum of the points scored by both teams in a game. </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What will be payout for Point Spread and Total bets? </h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>You will get the same amount in return as the amount you bet (minus) any vig. Short for vigorish,
+                        the vig is a commission charged by the bookmaker for accepting a wager. </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What are Prop bets?</h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>Prop bets provides the User to place a bet on any of the predefined props and also have an
+                        ability to create own prop and share it with your friends on social media and via other sharing
+                        options available on your mobile device</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="faq-panel-heading d-flex align-items-center radiodiv" onclick=selected(this)>
+                    <span class="rounded-circle crcl bg mr-2 d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <h2 class="my-0">What will be payout for Prop bets? </h2>
+                </div>
+                <div class="faq-panel-body">
+                    <p>This will be determined by the likelihood of the outcome of each individual prop bet.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

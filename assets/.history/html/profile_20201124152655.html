@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UDDA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../fonts">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="d-flex bg-light-green" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom text-center"><img src="../images/UDDA_Dashboard_Logo.png"
+                    class="img-fluid uddaLogoImg"></div>
+            <div class="list-group list-group-flush sidemenuDiv">
+                <a href="redeem-swag.html" class="list-group-item list-group-item-action bg-light"><img
+                        class="img-fluid" src="../images/redeem_SWAG.png" />Redeem SWAG <i
+                        class='fa fa-chevron-right'></i></a>
+                <a href="redemption_history" class="list-group-item list-group-item-action bg-light"><img
+                        class="img-fluid" src="../images/redemption_history.png" />Redeemption History <i
+                        class='fa fa-chevron-right'></i></a>
+                <a href="profile.html" class="list-group-item list-group-item-action bg-light"><img class="img-fluid"
+                        src="../images/profile.png" />Profile <i class='fa fa-chevron-right'></i></a>
+                <a href="faq.html" class="list-group-item list-group-item-action bg-light"><img class="img-fluid"
+                        src="../images/faq.png" />FAQ <i class='fa fa-chevron-right'></i></a>
+                <a href="video-tutorial.html" class="list-group-item list-group-item-action bg-light"><img
+                        class="img-fluid" src="../images/video_tutorials.png" />Vedio Tutorials <i
+                        class='fa fa-chevron-right'></i></a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom p-0">
+                
+                <div class="d-flex headerDiv">
+                    <button class="btn" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></button>
+                    <div class="font-weight-bold bg-light-green d-flex align-items-center flex-grow-1 pl-3 py-2">
+                        Redeem SWAG</div>
+                    <div
+                        class=" bg-light-green border-left d-flex flex-column justify-content-center px-3 py-2 mobile-d-none">
+
+                        <p class="m-0">Available UDDA Bucks</p>
+                        <p class="m-0 font-weight-bold"><img src="../images/udda_bucks.png" class="mr-1">50,000</p>
+                    </div>
+                    <div class=" d-flex align-items-center border-left pl-3 py-2">
+                        <div class="mr-2 mobile-d-none">
+                            <p class="m-0">Account Name</p>
+                            <p class="m-0 font-weight-bold">Devin Piscitelli</p>
+                        </div>
+                        <img src="../images/bag.jpg" class="img-fluid avatar rounded-circle mr-2 border mobile-d-none ProfileImg">
+                        <img src="../images/logout_icon.png" class="logoutImg">
+                    </div>
+                </div>
+                
+            </nav>
+
+            <div class="container-fluid p-2 ">
+                <div class="row bg-white border m-0 table1">
+                    <div
+                        class="col-md-3 profileDivBgColor d-flex flex-column justify-content-center align-items-center py-4">
+
+                        <img src="../images/bag.jpg" class="img-fluid avatar rounded-circle">
+
+                        <p class="color-text-green textUnderline text-center">change Photo</p>
+                        <div class="statusDiv color-text-green">
+                            <p class="position-relative m-0">Amateur <img src="../images/info_icon.png" class="ml-2">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 colR ">
+                        <div class="row">
+                            <div class="col-12 text-right color-text-green textUnderline editText">
+                                <i class="fa fa-pencil mr-1" aria-hidden="true"></i> Edit profile
+                            </div>
+                            <div class="col-md-6 mt-sm-3">
+
+                                <input type="text" class="form-control inputDiv" placeholder="First Name" id="fname">
+
+                            </div>
+                            <div class="col-md-6 mt-sm-3">
+
+                                <input type="text" class="form-control inputDiv" placeholder="Last Name" id="lname">
+
+                            </div>
+                            <div class="col-md-6 mt-3">
+
+                                <input type="text" class="form-control inputDiv" placeholder="User Name" id="Username">
+
+                            </div>
+                            <div class="col-md-6 mt-3">
+
+                                <input type="text" class="form-control inputDiv" placeholder="Email Address" id="email">
+
+                            </div>
+                            <div class="col-md-6 mt-3">
+
+                                <input type="tel" class="form-control inputDiv" placeholder="Phone Number" id="number">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg-white border mx-0 mt-2 table2">
+                    <div class="col-12">
+                        <h2>Shipping Address</h2>
+                    </div>
+                    <div class="col-md-6 mt-sm-3">
+                        <input type="text" class="form-control inputDiv" placeholder="Address1" id="add1">
+                        <span>Street Address, P.O Box</span>
+                    </div>
+                    <div class="col-md-6 mt-sm-3">
+                        <input type="text" class="form-control inputDiv" placeholder="Address2" id="add2">
+                        <span>Appartment, Suit, Unit, Building,Floor etc</span>
+                    </div>
+                    <div class="col-md-6 mt-3">
+
+                        <input type="text" class="form-control inputDiv" placeholder="City" id="city">
+
+                    </div>
+                    <div class="col-md-6 mt-3">
+
+                        <input type="text" class="form-control inputDiv" placeholder="State/Province/Region" id="state">
+
+                    </div>
+                    <div class="col-md-6 mt-3">
+
+                        <input type="text" class="form-control inputDiv" placeholder="Zip" id="zip">
+
+                    </div>
+                    <div class="col-md-6 mt-3">
+
+                        <select id="country" class="form-control inputDiv">
+                            <option>USA</option>
+                        </select>
+                    </div>
+                    <div class="col-12 my-4 text-right">
+                        <button type="button" class="btn bg-dark-green text-white py-1 rounded-0 px-4">Save
+                            Changes</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+    <footer class="page-footer px-4 py-4 bg-light-green border-top d-flex align-items-center">
+
+        <div class="row w-100 m-0">
+            <div class="col-md-6 footer-copyright pl-0">© 2020 All rights reserved. UDDA</div>
+            <div class="col-md-6 text-right pr-0">
+                <a href="#" class="text-dark">Terms of Use</a> |
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+</html>

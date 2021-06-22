@@ -1,0 +1,268 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url("fonts/BebasNeue-Regular.svg") format("svg"),
+    /* Legacy iOS */ url("fonts/BebasNeue-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("fonts/BebasNeue-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+.bg-white {
+  background: #ffffff;
+}
+.blue-bg {
+  background-color: #69bcbc !important;
+}
+.blue-color {
+  color: #69bcbc;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-bottom: 1px solid #ced4da !important;
+}
+.btn:focus {
+  box-shadow: none !important;
+}
+.bg-light-green {
+  background: #f4f6f4;
+}
+.profileDivBgColor {
+  background: #e8ede9;
+}
+.color-text-green {
+  color: #68bcbc !important;
+}
+.bg-dark-green {
+  background: #68bcbc !important;
+}
+
+.textUnderline {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+/* .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px 0 16px 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a:hover{
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar img{
+    width: 15%;
+    margin-right: 5%;
+  }
+
+  .sidebar i{
+      float: right;
+      color: #000000;
+      margin: 7px 0px 0px 0px;
+  }
+.ulFontStyle{
+    font-size: 14px;
+}
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: left;
+      float: none;
+      padding-right: 5px;
+      padding-left: 12px;
+    }
+  }
+
+  body {
+    padding-top: 55px;
+}
+
+.w-sidebar {
+    width: 200px;
+    max-width: 200px;
+}
+
+.row.collapse {
+    margin-left: -200px;
+    left: 0;
+	transition: margin-left .15s linear;
+}
+
+.row.collapse.show {
+    margin-left: 0 !important;
+}
+
+.row.collapsing {
+    margin-left: -200px;
+    left: -0.05%;
+	transition: all .15s linear;
+}
+
+@media (max-width:768px) {
+
+    .row.collapse,
+    .row.collapsing {
+        margin-left: 0 !important;
+        left: 0 !important;
+        overflow: visible;
+    }
+    
+    .row > .sidebar.collapse {
+        display: flex !important;
+        margin-left: -100% !important;
+        transition: all .25s linear;
+        position: fixed;
+        z-index: 1050;
+        max-width: 0;
+        min-width: 0;
+        flex-basis: auto;
+    }
+    
+    .row > .sidebar.collapse.show {
+        margin-left: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: initial;
+    }
+    
+    .row > .sidebar.collapsing {
+        display: flex !important;
+        margin-left: -10% !important;
+        transition: all .2s linear !important;
+        position: fixed;
+        z-index: 1050;
+        min-width: initial;
+    }
+    
+} */
+
+/****************faq*************simple-sidebar***********************/
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 89.7%;
+  /* min-height: 100vh; */
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  position: fixed;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.975rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.sidemenuDiv img {
+  width: 15%;
+  margin-right: 5%;
+}
+
+.sidemenuDiv i {
+  float: right;
+  color: #000000;
+  margin: 7px 0px 0px 0px;
+}
+.sidemenuDiv .list-group-item {
+  padding: 0.75rem 0.35rem;
+  border: none;
+}
+#sidebar-wrapper .uddaLogoImg {
+  width: 65%;
+}
+.rightSection{
+  margin-left: 292px!important;
+  margin-top: 69px!important;
+}
+/**************************header******************/
+.headerDiv {
+  width: 100%;
+  font-size: 0.9rem;
+}
+.headerDiv .logoutImg {
+  width: 12%;
+}
+.headerDiv .ProfileImg {
+  width: 50px;
+  height: 50px !important;
+}
+.headerDiv .uddaLogoDiv{
+  width: 284px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerDiv .uddaLogoImgweb{
+  width: 60%;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 626px) {
+  .d-flex.mobile-d-none {
+    display: none !important;
+  }
+  .mobile-d-none {
+    display: none !important;
+  }
+  .headerDiv .logoutImg {
+    width: 60%;
+  }
+  .headerDiv .uddaLogoDiv{
+    display: none !important;
+  }
+}
+

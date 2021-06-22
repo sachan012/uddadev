@@ -1,0 +1,104 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* font converted using font-converter.net. thank you! */
+@font-face {
+	font-family: "BebasNeue-Regular";
+	src: url("fonts/BebasNeue-Regular.svg") format("svg"), /* Legacy iOS */
+	  url("fonts/BebasNeue-Regular.woff") format("woff"), /* Modern Browsers */
+	  url("fonts/BebasNeue-Regular.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+.blue-bg{
+    background-color: #69bcbc!important;
+}
+.blue-color{
+    color: #69bcbc;
+}
+
+.form-control:focus{
+    box-shadow: none!important;
+    border-bottom: 1px solid #ced4da!important;
+}
+.btn:focus{
+    box-shadow: none!important;
+}
+.bg-light-green{
+    background: #f4f6f4;
+}
+.profileDivBgColor{
+    background: #e8ede9;
+}
+.color-text-green{
+    color:#68bcbc!important;
+}
+.bg-dark-green{
+    background:#68bcbc!important;
+}
+
+.textUnderline{
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    color: #68bcbc;
+  }
+  .sidebar a:hover{
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar img{
+    width: 13%;
+    margin-right: 5%;
+  }
+
+  .sidebar i{
+      float: right;
+      color: #000000;
+  }
+  div.content {
+    margin-left: 300px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }

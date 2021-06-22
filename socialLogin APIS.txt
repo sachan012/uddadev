@@ -1,0 +1,160 @@
+SOCIAL LOGIN API 
+
+1. http://uddadev.triazinesoft.com/index.php/v2_7/auth/facebook_signup
+ 2. http://uddadev.triazinesoft.com/index.php/v2_7/auth/google_signup
+ 3.  http://uddadev.triazinesoft.com/index.php/v2_7/auth/twitter_signup
+
+Requeest   
+
+
+protected function social_login($params, $type)
+    {
+
+        $this->form_validation->set_rules('email', 'email', ['trim', 'valid_email']);
+        $this->form_validation->set_rules($type, $type, ['trim', 'required']);
+
+        $this->login_check();
+
+        $photo = $params['profile_pic'];
+        if (isset($params['email']) && (!empty($params['email']))) {
+            $user = $this->user->get_by(['email' => $params['email']]);
+            if (!empty($user)) {
+                if ($user->$type == $params[$type]) {
+                    $user = $this->user->get_by(['email' => $params['email'], $type => $params[$type]]);
+                }
+            }
+        }
+        else {
+            $user = $this->user->get_by([$type => $params[$type]]);
+        }
+
+        $params['access_token'] = $this->user->generate_access_token();
+        //$this->user->update_device_token($user->id, $params['device_token']);
+        $file = '';
+        if (!empty($photo)) {
+            if (empty($user) || empty($user->photo)) {
+                $file = $this->user->generate_filename();
+                $fullpath = asset_path() . 'photos/' . $file;
+                //$data = explode(',', $photo);
+                $this->load->helper('file');
+                write_file($fullpath, base64_decode($photo));
+            }
+        }
+
+        if ($user) {
+            if (empty($user->$type) || $user->$type == $params[$type]) {
+                $update_data = [
+                    $type => $params[$type],
+                    'latitude' => $params['latitude'],
+                    'longitude' => $params['longitude'],
+                    'access_token' => $params['access_token'],
+                    'device_type' => $params['device_type'],
+                    'device_token' => $params['device_token'],
+                    'verified' => 1
+                ];
+                if (!empty($file)) {
+                    $update_data['photo'] = $file;
+                }
+                $this->user->update($user->id, $update_data);
+
+            }
+        } else {
+            $referral_code = $this->user->generate_referral_code();
+            $user_id = $this->user->insert(
+                [
+                    'email' => (isset($params['email']) && (!empty($params['email']))) ? $params['email'] : NULL,
+                    'phone' => (isset($params['mobile']) && (!empty($params['mobile']))) ? $params['mobile'] : NULL,
+                    'firstname' => $params['firstname'],
+                    'lastname' => (isset($params['lastname']) && (!empty($params['lastname']))) ? $params['lastname'] : '',
+                    'device_token' => $params['device_token'],
+                    'access_token' => $params['access_token'],
+                    'my_referral_code' => strtoupper($referral_code),
+                    'longitude' => $params['longitude'],
+                    'latitude' => $params['latitude'],
+                    'device_type' => $params['device_type'],
+                    'photo' => ((!empty($file))) ? $file : NULL,
+                    'verified' => 1,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    $type => $params[$type]
+
+                ]
+            );
+            $user = $this->user->get($user_id);
+        }
+
+        if (isset($user_id) && isset($params['guest_access_token']) && $params['guest_access_token'] != '') {
+            /*--Check Referral code exists---*/
+            $guestUserDetails = $this->user->as_array()->get_by(['type' => 'Guest', 'access_token' => $params['guest_access_token'], 'registered_user_id IS NULL']);
+            if (!empty($guestUserDetails)) {
+                /*-----Registered Id update when guest user----------*/
+                $this->user->update($guestUserDetails['id'], array(
+                    'registered_user_id' => $user_id
+                ));
+
+                $module_id = '1';
+                /* Target user with incentive if not active */
+                $no_of_diff = get_date_diff_for_retarget($guestUserDetails['created_at']);
+                $retargetData = get_retarget_module_incentive($module_id, $no_of_diff);
+                if (!empty($retargetData)) {
+                    $incentive_amount = $retargetData['incentive'];
+                    if ($incentive_amount > 0) {
+                        $types = explode(",", $retargetData['type']);  // for checking that email or push or both is going or not
+                        $pushFlag = 0;
+                        $emailFlag = 0;
+                        $smsFlag = 0;
+                        if (in_array(1, $types)) {
+                            $pushFlag = 1;  //for push notification
+                        }
+                        if (in_array(2, $types)) {
+                            $emailFlag = 1; //for email notification
+                        }
+                        if (in_array(3, $types)) {
+                            $smsFlag = 1; //for sms notification
+                        }
+                        /*----Active user Notification----------------*/
+                        $title = RETARGET_INCENTIVE_AMOUNT;
+                        $desc = 'UDDA has added ' . number_format($incentive_amount) . ' incentive amounts to your bankroll.';
+
+                        if ($pushFlag == 1) {
+                            /*-------Notification Sent--------*/
+                            $user_details = $this->user->as_array()->get_by(['id' => $user_id]);
+                            $preference_type = 'promotional'; // User notification type like favourite_team,my_bets,promotional
+                            notification_send($user_details, $title, $desc, 'retarget_unregistered_users', '', '', 'retarget_unregistered_users', $preference_type);
+                        }
+
+                        if ($emailFlag == 1) {
+                            $emailfor = $guestUserDetails["email"];
+                            if (!empty($emailfor) && $emailfor != null) {
+                                // Validate email
+                                if (filter_var($emailfor, FILTER_VALIDATE_EMAIL)) {
+                                    email_send($emailfor, $title, $desc);
+                                }
+                            }
+                        }
+
+                        if ($smsFlag == 1) {
+                            $smsfor = $guestUserDetails["phone"];  // for sending the client if phone number is avilable.
+                            if (!empty($smsfor) && $smsfor != null) {
+                                $this->load->helper("sms");
+                                send_sms($smsfor, $desc);
+                            }
+                        }
+                        /* Incentive amount credit to user chip balance */
+                        $this->user->credit_chip_amount($user_id, $incentive_amount);
+                    }
+
+                }
+            }
+        }
+
+        $response = array('token' => $params['access_token'],
+            'firstname' => $user->firstname,
+            'lastname' => $user->lastname == NULL ? '' : $user->lastname,
+            'profile_pic' => $this->get_userphoto($user->photo),
+            'phone' => $user->phone == NULL ? '' : $user->phone,
+            'email' => $user->email,
+            'referral_popup_show' => isset($user_id) ? '1' : '0',
+            'verified' => $user->verified);
+        return $response;
+    }
+

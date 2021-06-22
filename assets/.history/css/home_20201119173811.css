@@ -1,0 +1,10 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.topDiv{
+    background-image: url(https://www.udda.com/wp-content/uploads/2019/10/banner.jpg?id=52) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}

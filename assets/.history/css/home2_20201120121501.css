@@ -1,0 +1,14 @@
+
+/*************SecondDiv*****************/
+.vc_single_image-img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+.secondDivRow h3{
+    font-family: 'BebasNeue-Regular', sans-serif;
+    color: #333333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

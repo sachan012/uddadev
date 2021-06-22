@@ -1,0 +1,401 @@
+/*************FirstDiv*****************/
+
+.banner_firstDiv {
+  background-image: url(https://www.udda.com/wp-content/uploads/2019/10/banner.jpg?id=52) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.topDiv {
+  background-image: url(https://www.udda.com/wp-content/uploads/2019/10/11.jpg.png) !important;
+  background-position: top left !important;
+  background-repeat: no-repeat !important;
+  background-size: 35% !important;
+}
+
+.sticker {
+  position: absolute;
+  left: 0;
+  margin-left: 1% !important;
+  width: 42.4%;
+  width: 25vw;
+  float: left;
+}
+
+.logo {
+  margin-top: 2.5%;
+  width: 85%;
+}
+
+.secondColTopDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.paddingHomeTopDiv {
+  padding-top: 25px;
+}
+.secondColTopDiv h1 {
+  font-size: 1.63rem;
+  font-weight: bold;
+  margin-top: -4%;
+  margin-bottom: 6.5%;
+  padding: 2%;
+  font-family: "Montserrat", sans-serif;
+}
+.secondH2 {
+  border-top: 1.5px solid #000;
+  border-bottom: 1.5px solid #000;
+}
+.txt-cntr h2 {
+  /* font-size: 1.63rem; */
+  font-size: 1.03rem;
+  font-weight: bold;
+  margin-top: 4.5%;
+  margin-bottom: 1.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+p.appStoreDiv {
+  margin-bottom: 2rem;
+}
+
+.homeTopDiv h2 {
+  color: #333333;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.signInBtn {
+  color: #fff !important;
+  font-weight: bold !important;
+  font-family: "Montserrat", sans-serif;
+  width: 40%;
+  margin: 0 auto;
+}
+.faqText {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/*************SecondDiv*****************/
+.vc_single_image-img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+.vc_column-inner {
+  box-sizing: border-box;
+  padding-top: 48px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.secondDivRow h3 {
+  font-family: "BebasNeue-Regular", sans-serif;
+  color: #333333;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*******************ThirdDiv*********************/
+.imgFullWidth {
+  width: 100%;
+  min-height: fit-content;
+}
+.colPadding {
+  padding-left: 5rem !important;
+  padding-right: 3rem !important;
+  padding-top: 35px !important;
+}
+.imgHeightFull {
+  align-items: stretch;
+  display: flex;
+}
+.imgLine {
+  margin-top: 10%;
+  width: 100%;
+}
+span.free-to-play {
+  position: relative;
+  padding: 10px 0;
+  display: block;
+  margin-bottom: 20px !important;
+}
+.free-to-play::before,
+.free-to-play::after {
+  content: url(https://www.udda.com/wp-content/uploads/2019/10/line.png);
+}
+.free-to-play::before,
+.free-to-play::after {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  right: 0;
+}
+.free-to-play::after {
+  top: auto;
+  bottom: -30px;
+}
+
+.get-content {
+  background-color: #ff9900;
+  width: 90%;
+  margin: auto;
+}
+.get-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 63px;
+  color: #fff;
+  text-align: left;
+}
+.get-started {
+  color: #fff;
+}
+.get-started p {
+  font-size: 24px;
+  padding: 13px 40px;
+  font-family: "Montserrat", sans-serif;
+}
+/**************footerDiv************************/
+.mrgnboth {
+  margin: 100px 0;
+}
+.footer h1 {
+  font-family: "BebasNeue-Regular", sans-serif;
+  color: #69bcbc;
+  font-size: 63px;
+  letter-spacing: 4px;
+}
+.footer p {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 1%;
+  font-size: 30px;
+  font-weight: 600;
+}
+.txt-cntr {
+  text-align: center;
+}
+.app {
+  margin-top: 3%;
+}
+.udda_content {
+  margin-bottom: 3%;
+}
+.google_play {
+  vertical-align: top !important;
+}
+.green_border {
+  display: inline-block;
+  margin: 0%;
+  width: 100%;
+  height: 1%;
+  max-width: 55%;
+  border-top: 3px solid #69bcbc;
+}
+.Stay_Connected {
+  display: inline-block;
+}
+.udda_Winner {
+  text-decoration: none;
+  margin: 1%;
+}
+
+.udda_YouTube {
+  width: 50px;
+  height: 50px;
+}
+.green_bottom {
+  margin-top: 1%;
+  border-top: 3px solid #69bcbc;
+}
+.footer-end-content p {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+/**************modal*********************/
+.modal-dialog.signInModal {
+  width: 60% !important;
+  max-width: 60% !important;
+}
+
+.signInModal .modal-content {
+  border-radius: 10px;
+}
+
+.signInModal .banner_firstDiv {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.signInModal .modalCol{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signInModal .modalCol h5{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.signInModal .modalCol h5.text1{
+  margin-top: 10%;
+  margin-bottom: 5%;
+  color: #ffff;
+}
+
+.signInModal .signInBtn {
+  color: #fff !important;
+  font-weight: bold !important;
+  font-family: "Montserrat", sans-serif;
+}
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+.separator::before {
+  margin-right: .50em;
+}
+.separator::after {
+  margin-left: .50em;
+}
+.fa {
+  padding: 20px;
+  text-align: center;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+@media screen and (max-width: 360px) {
+  /********************ThirdDiv start********************/
+  .get-started h1 {
+    font-size: 25px !important;
+  }
+  .get-content h2 {
+    font-size: 35px;
+  }
+  .get-started p {
+    font-size: 13px !important;
+  }
+  .colPadding {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+  .imgFullWidth {
+    min-height: auto !important;
+  }
+  /********************ThirdDiv end********************/
+}
+@media screen and (max-width: 767px) {
+  .footer p {
+    font-size: 24px;
+  }
+}
+
+/**********FAQ**********/
+.bg-white {
+  background-color: #fff !important;
+}
+.faq-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.faq-panel-heading {
+  border-radius: 10px !important;
+  border: none !important;
+  color: #000;
+  background: #eeeeee;
+  padding: 20px 30px !important;
+  margin: 10px !important;
+}
+.faq-panel-heading h2 {
+  font-size: 1.1rem;
+}
+.crcl {
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  color: #69bcbc !important;
+  background: #f8f8f8;
+}
+.faq-panel-body {
+  border: 1px solid #f0f0f0;
+  background-color: #f8f8f8;
+  border-width: 1px;
+  padding: 14px 20px;
+  margin: 10px !important;
+}
+.faq-panel-heading.active {
+  padding: 25px;
+  background-color: #69bcbc !important;
+  color: white;
+  font-size: 25px;
+}
+.faq-panel-heading.active .crcl {
+  color: #69bcbc !important;
+  background-color: #f8f8f8;
+}
+.faq-panel-heading + div {
+  display: none;
+}
+.faq-panel-heading.active + div {
+  display: block;
+}
+.fa {
+  font-size: 1rem !important;
+}
+/***********End FAQ****************/
+
+
+/************Start Redeem SWAG***********************/
+
+.redeem-container h2 {
+  font-size: 1.2rem;
+  padding: 1% 1%;
+}
+
+.redeem-container .redeemTable thead tr {
+  background: #e8ede9;
+}
+
+.redeemTable tr td {
+  vertical-align: middle;
+}
+
+.redeemTable .tableImage {
+  width: 60px;
+  height: 60px;
+}
+
+
+/************End Redeem SWAG***********************/

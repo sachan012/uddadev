@@ -1,0 +1,71 @@
+
+/*************SecondDiv*****************/
+.vc_single_image-img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+.vc_column-inner {
+    box-sizing: border-box;
+    padding-top: 35px;
+    width: 100%;
+}
+.secondDivRow h3{
+    font-family: 'BebasNeue-Regular', sans-serif;
+    color: #333333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*******************ThirdDiv*********************/
+.imgFullWidth{
+    width: 100%;
+}
+.vc_custom {
+    background-image: url(https://www.udda.com/wp-content/uploads/2019/10/get-start.png?id=60) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+span.free-to-play {
+    position: relative;
+    padding: 10px 0;
+    display: block;
+    margin-bottom: 20px !important;
+}
+.free-to-play::before, .free-to-play::after {
+    content: url(https://www.udda.com/wp-content/uploads/2019/10/line.png);
+}
+.free-to-play::before, .free-to-play::after {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    right: 0;
+}
+.free-to-play::after {
+    top: auto;
+    bottom: -30px;
+}
+
+.get-content {
+    background-color: #ff9900;
+    width: 90%;
+}
+.get-content h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 63px;
+    color: #fff;
+}
+.get-started {
+    color: #fff;
+}
+.get-started p {
+    font-size: 24px;
+    padding: 13px 40px;
+    font-family: 'Montserrat', sans-serif;
+}

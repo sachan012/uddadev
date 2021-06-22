@@ -1,0 +1,68 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.topDiv{
+    background-image: url(https://www.udda.com/wp-content/uploads/2019/10/banner.jpg?id=52) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.container{
+    text-align: center;
+    }
+    /* .mrgnboth{
+        margin: 100px 0;
+    } */
+    
+    .line {
+        color: #69bcbc;
+        font-size: 63px;
+        letter-spacing: 4px;
+    }
+    .footer h1 {
+        font-family: 'BebasNeue-Regular', sans-serif;
+        color: #69bcbc;
+        letter-spacing: 4px;
+    
+    }
+    
+    .footer p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 10px;
+    }
+    
+    .green_border{
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        height: 1px;
+        max-width: 560px;
+        border-top: 3px solid #69bcbc;
+    }
+    
+    .green_bottom{
+        margin-top: 15px;
+        border-top: 3px solid #69bcbc;
+    }
+    
+    .udda_Winner{
+        text-decoration: none;
+        margin: 10px;
+    }
+    
+    .udda_YouTube{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Stay_Connected{
+        display: inline-block;
+    }
+    
+    .udda_content{
+        margin-bottom:20px;
+    }
